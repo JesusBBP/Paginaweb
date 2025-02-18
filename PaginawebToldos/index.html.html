@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dhamma Mallorca - Toldos y Mosquiteras</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+	<style>
+    	@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+    	* {
+        	margin: 0;
+        	padding: 0;
+        	box-sizing: border-box;
+        	font-family: 'Helvetica Neue', Arial, sans-serif;
+    	}
+
+    	:root {
+        	--primary-color: #1a4d7c;
+        	--secondary-color: #3498db;
+        	--accent-color: #f39c12;
+        	--text-color: #333;
+        	--light-bg: #f8f9fa;
+    	}
+
+    	body {
+        	line-height: 1.6;
+        	color: var(--text-color);
+    	}
+
+        p{
+            font-family: "Karla", serif;
+        }
+        h1{
+            font-family: "Karla", serif;
+        }
+        h2{
+            font-family: "Karla", serif;
+        }
+        h3 {
+            font-family: "Karla", serif;
+        }
+
+    	/* Header Styles */
+    	.header {
+        	position: fixed;
+        	top: 0;
+        	width: 100%;
+        	height: 110px;
+        	background: rgba(255, 255, 255, 0.95);
+        	z-index: 1000;
+        	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        	transition: all 0.3s ease;
+        	background-color: var(--text-color);
+    	}
+
+    	.header.scrolled {
+        	background: white;
+    	}
+
+    	.nav-container {
+        	max-width: 1200px;
+        	margin: 0 auto;
+        	padding: 1rem;
+        	display: flex;
+        	justify-content: space-between;
+        	align-items: center;
+    	}
+
+   	 
+
+    	.nav-menu {
+        	display: flex;
+        	gap: 2rem;
+        	list-style: none;
+    	}
+
+    	.nav-menu a {
+        	text-decoration: none;
+        	color: white;
+        	font-weight: 500;
+        	transition: color 0.3s ease;
+        	font-size:20px ;
+        	position: relative;
+        	left: 150px;
+    	}
+    	.logo{
+        	position: relative;
+        	right: 100px;
+        	height: 80px;
+
+    	}
+    	.nav-menu a:hover {
+        	color: var(--secondary-color);
+    	}
+
+    	/* Hero Section */
+    	.hero {
+        	height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('imagen\ de\ cabecera.jpg');
+        	background-size: cover;
+        	background-position: center;
+        	display: flex;
+        	align-items: center;
+        	justify-content: center;
+        	text-align: center;
+        	color: white;
+    	}
+
+    	.hero-content {
+        	max-width: 800px;
+        	padding: 2rem;
+    	}
+   	 
+    	.hero h1 {
+        	font-size: 4rem;
+        	margin-bottom: 1rem;
+        	animation: fadeInUp 1s ease;
+        	font-family: "Karla", serif;
+    	}
+
+    	.hero p {
+        	font-size: 2rem;
+        	margin-bottom: 2rem;
+        	animation: fadeInUp 1s ease 0.2s;
+        	opacity: 0;
+        	animation-fill-mode: forwards;
+        	font-family: "Karla", serif;
+    	}
+   	 
+
+    	/* Sections */
+    	.section {
+        	padding: 5rem 2rem;
+    	}
+
+    	.section-title {
+        	text-align: center;
+        	margin-bottom: 3rem;
+        	color: var(--primary-color);
+        	font-size: 50px;
+    	}
+
+    	.container {
+        	max-width: 1200px;
+        	margin: 0 auto;
+       	 
+    	}
+    	.section-quienes-somos {
+        	padding: 5rem 2rem;
+    	}
+
+    	.container-quienes-somos {
+        	max-width: 1200px;
+        	margin: 0 auto;
+        	padding: 2rem;
+        	background: white;
+        	border-radius: 10px;
+    	}
+
+    	.quienes-somos-content {
+        	text-align: center;
+        	padding: 2rem;
+    	}
+
+    	.quienes-somos-content h3 {
+        	color: var(--primary-color);
+        	font-size: 4rem;
+        	margin-bottom: 1rem;
+    	}
+
+    	.quienes-somos-content h2 {
+        	color: var(--primary-color);
+        	font-size: 3rem;
+        	margin-bottom: 2rem;
+    	}
+
+    	.quienes-somos-content p {
+        	font-size: 1.2rem;
+        	line-height: 1.8;
+        	color: var(--text-color);
+        	max-width: 800px;
+        	margin: 0 auto;
+    	}
+    	.section-servicios {
+        	padding: 5rem 2rem;
+    	}
+
+    	.section-title-servicios {
+        	text-align: center;
+        	margin-bottom: 3rem;
+        	color: var(--primary-color);
+        	font-size: 50px;
+    	}
+
+    	.container-servicios {
+        	max-width: 1200px;
+        	margin: 0 auto;
+        	box-shadow: 0 5px 100px rgba(7, 4, 4, 0.556);
+    	}
+   	 
+
+    	/* Products Grid */
+    	.products-grid {
+        	display: grid;
+        	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        	gap: 2rem;
+    	}
+
+    	.product-card {
+        	background: white;
+        	border-radius: 10px;
+        	overflow: hidden;
+        	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        	transition: transform 0.3s ease;
+    	}
+
+    	.product-card:hover {
+        	transform: translateY(-5px);
+    	}
+
+    	.product-image {
+        	height: 250px;
+        	background-size: cover;
+        	background-position: center;
+    	}
+
+    	.product-content {
+        	padding: 1.5rem;
+    	}
+
+    	/* Features Section */
+    	.features-grid {
+        	display: grid;
+        	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        	gap: 2rem;
+        	padding: 2rem;
+    	}
+
+    	.feature-card {
+        	text-align: center;
+        	padding: 2rem;
+        	background: white;
+        	border-radius: 10px;
+        	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        	transition: transform 0.3s ease;
+    	}
+
+    	.feature-card:hover {
+        	transform: translateY(-5px);
+    	}
+
+    	.feature-icon {
+        	width: 200px;
+        	height: 200px;
+        	object-fit: cover;
+        	border-radius: 10px;
+        	margin-bottom: 1.5rem;
+        	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    	}
+
+    	/* Contact Section */
+    	.contact-section {
+        	background: rgb(214, 214, 214);
+    	}
+        footer {
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        background: rgb(214, 214, 214);
+        color: black;
+}
+
+    	.contact-grid {
+        	display: grid;
+        	grid-template-columns: 1fr 1fr;
+        	gap: 2rem;
+    	}
+
+    	.contact-form {
+        	background: white;
+        	padding: 2rem;
+        	border-radius: 10px;
+        	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    	}
+        .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        }
+
+    .whatsapp-btn img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        }
+
+    	.form-group {
+        	margin-bottom: 1.5rem;
+    	}
+
+    	.form-group label {
+        	display: block;
+        	margin-bottom: 0.5rem;
+    	}
+
+    	.form-group input,
+    	.form-group textarea {
+        	width: 100%;
+        	padding: 0.8rem;
+        	border: 2px solid #ddd;
+        	border-radius: 5px;
+    	}
+
+    	.btn {
+        	background: var(--primary-color);
+        	color: white;
+        	padding: 0.8rem 2rem;
+        	border: none;
+        	border-radius: 5px;
+        	cursor: pointer;
+        	transition: background 0.3s ease;
+    	}
+
+    	.btn:hover {
+        	background: var(--secondary-color);
+    	}
+
+    	/* Gallery */
+    	.gallery {
+        	display: grid;
+        	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        	gap: 1rem;
+    	}
+
+    	.gallery-item {
+        	position: relative;
+        	overflow: hidden;
+        	border-radius: 10px;
+        	cursor: pointer;
+    	}
+
+    	.gallery-item img {
+        	width: 100%;
+        	height: 250px;
+        	object-fit: cover;
+        	transition: transform 0.3s ease;
+        	border-radius: 10px;
+    	}
+
+    	.gallery-item:hover img {
+        	transform: scale(1.1);
+    	}
+
+    	/* Mobile Menu */
+    	.mobile-menu-btn {
+        	display: none;
+        	font-size: 1.5rem;
+        	cursor: pointer;
+    	}
+
+    	@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        text-align: center;      
+    }
+}
+        
+
+    	/* Animations */
+    	@keyframes fadeInUp {
+        	from {
+            	opacity: 0;
+            	transform: translateY(20px);
+        	}
+        	to {
+            	opacity: 1;
+            	transform: translateY(0);
+        	}
+    	}
+    	/* Lightbox Styles */
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1500;
+	justify-content: center;
+	align-items: center;
+}
+
+.lightbox.active {
+	display: flex;
+}
+
+.lightbox-content {
+	max-width: 90%;
+	max-height: 90vh;
+	position: relative;
+}
+
+.lightbox-content img {
+	max-width: 100%;
+	max-height: 90vh;
+	object-fit: contain;
+}
+
+.close-lightbox {
+	position: absolute;
+	top: -40px;
+	right: 0;
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 5px;
+}
+
+.lightbox-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 20px;
+	transition: opacity 0.3s;
+}
+
+.lightbox-nav:hover {
+	opacity: 0.7;
+}
+
+.prev-btn {
+	left: 20px;
+}
+
+.next-btn {
+	right: 20px;
+}
+	</style>
+</head>
+<body>
+    
+	<header class="header">
+    	<div class="nav-container">
+        	<img class="logo" src="logo-DHAM-1.jpg">
+        	<ul class="nav-menu">
+            	<li><a href="#inicio">Inicio</a></li>
+            	<li><a href="#Quienes-somos">Sobre nosotros</a></li>
+            	<li><a href="#servicios">Servicios</a></li>
+            	<li><a href="#galeria">Galería</a></li>
+            	<li><a href="#contacto">Contacto</a></li>
+        	</ul>
+    	</div>
+	</header>
+
+    
+	<section class="hero" id="inicio">
+    	<div class="hero-content">
+        	<h1>Toldos y Mosquiteras</h1>
+        	<p>Soluciones de calidad para su hogar en Mallorca</p>
+    	</div>
+	</section>
+
+   
+	<section class="section-quienes-somos" id="Quienes-somos">
+    	<div class="container-quienes-somos">
+        	<div class="quienes-somos-content">
+            	<h3>Distribución para profesionales</h3>
+            	<p>Somos especialistas en la distribución exclusiva de una amplia gama de productos para profesionales, incluyendo toldos, mosquiteras, puertas enrollables y seccionales, pérgolas tensadas y bioclimáticas, mallorquinas motorizadas y stores.</p>
+        	</div>
+    	</div>
+	</section>
+
+	<section class="section-servicios" id="servicios">
+    	<div class="container-servicios">
+        	<h2 class="section-title-servicios">Nuestros Servicios</h2>
+        	<div class="features-grid">
+            	<div class="feature-card">
+                	<img src="toldo-en-piscina.jpg" alt="Persianas y Mosquiteras" class="feature-icon" style="border: solid 2px grey;">
+                	<h3>Somos Especialistas</h3>
+                	<p>En la distribución exclusiva de una amplia gama de productos para profesionales, incluyendo toldos, mosquiteras, puertas enrollables y seccionales, pérgolas tensadas y bioclimáticas, mallorquinas motorizadas y stores.</p>
+            	</div>
+            	<div class="feature-card">
+                	<img src="luxeThem-1.jpg" alt="Sistemas Luxetherm" class="feature-icon">
+                	<h3>Te ofrecemos</h3>
+                	<p>Productos innovadores y duraderos, lo mejor para profesionales en Baleares. Nuestro equipo está comprometido en proporcionar un servicio excepcional, desde el asesoramiento inicial hasta la entrega y la instalación</p>
+            	</div>
+            	<div class="feature-card">
+                	<img src="clientes-satisfecho-persiana-veneciana.jpg" alt="Toldos y Protección Solar" class="feature-icon">
+                	<h3>Soluciones Innovadoras</h3>
+                	<p>Si estas buscando mejorar la protección solar de tus proyectos comerciales o residenciales, en DHAM tenemos las soluciones perfectas para tus necesidades. Contáctanos hoy mismo para descubrir cómo podemos ayudarte a crear espacios</p>
+            	</div>
+        	</div>
+    	</div>
+	</section>
+
+
+	<section class="section" id="galeria">
+    	<div class="container">
+        	<h2 class="section-title">Galería de Trabajos</h2>
+        	<div class="gallery">
+            	<div class="gallery-item">
+                	<img src="exterior-of-a-modern-terrace-with-furnishings-2023-11-27-05-13-59-utc-scaled.jpg" alt="Trabajo 1">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="exterior-shots-of-a-modern-terrace-with-dining-tab-2023-11-27-04-56-59-utc-scaled.jpg" alt="Trabajo 2">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="simple-modern-style-kitchen-in-white-2023-11-27-05-30-25-utc-scaled.jpg" alt="Trabajo 3">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="modern-battens-roof-awning-outside-of-building-aga-2023-11-27-05-30-17-utc-scaled.jpg" alt="Trabajo 4">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="room-with-sunlight-coming-through-the-blinds-2023-11-27-04-57-50-utc-scaled.jpg" alt="Trabajo 5">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="closeup-shot-of-black-window-blinds-2023-11-27-05-32-34-utc-scaled.jpg" alt="Trabajo 6">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="low-angle-view-of-modern-roof-awning-outside-of-bu-2023-11-27-05-25-05-utc-scaled (1).jpg" alt="Trabajo 7">
+            	</div>
+            	<div class="gallery-item">
+                	<img src="blue-sky-reflection-on-glass-windows-surface-and-b-2023-11-27-05-13-02-utc-scaled (1).jpg" alt="Trabajo 8">
+            	</div>
+        	</div>
+    	</div>
+	</section>
+
+	<section class="section contact-section" id="contacto">
+    	<div class="container">
+        	<h2 class="section-title">Contacto</h2>
+        	<div class="contact-grid">
+            	<div class="contact-form">
+                	<form id="contactForm">
+                    	<div class="form-group">
+                        	<label for="name">Nombre</label>
+                        	<input type="text" id="name" required>
+                    	</div>
+                    	<div class="form-group">
+                        	<label for="email">Email</label>
+                        	<input type="email" id="email" required>
+                    	</div>
+                    	<div class="form-group">
+                        	<label for="phone">Teléfono</label>
+                        	<input type="tel" id="phone"  required>
+                    	</div>
+                    	<div class="form-group">
+                        	<label for="message">Mensaje</label>
+                        	<textarea id="message" rows="5" required></textarea>
+                    	</div>
+                    	<button type="submit" class="btn">Solicitar Presupuesto</button>
+                	</form>
+            	</div>
+            	<div class="contact-info">
+                	<h3>Información de Contacto</h3>
+                	<p><i class="fas fa-map-marker-alt"></i> Carrer Germán Montada n14 bajos</p>
+                	<p><i class="fas fa-phone"></i> +34 747497703</p>
+                	<p><i class="fas fa-envelope"></i> analopez.amcl@gmail.com</p>
+                	<div style="margin-top: 1rem;">
+                    	<a href="https://www.instagram.com/dhammallorca" target="_blank" style="text-decoration: none; color: #333; margin-right: 1rem; font-size: 1.5rem;">
+                        	<i class="fab fa-instagram" style='font-size:48px;color:orangered'></i>
+                    	</a>
+                    	<a href="https://www.linkedin.com/in/dham-mallorca-solar-systems-417b1a294/" target="_blank" style="text-decoration: none; color: #333; font-size: 1.5rem;">
+                        	<i class="fab fa-linkedin" style='font-size:48px;color:blue'></i>
+                    	</a>
+                        <a href="https://wa.me/+34747497703" class="whatsapp-btn" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+                        </a>
+                        
+                	</div>
+                	<div class="map" style="margin-top: 2rem; height: 300px;">
+                    	<div class="map" style="margin-top: 2rem; height: 300px;">
+                        	<iframe
+                            	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12260.263673718235!2d2.5833333!3d39.5166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297925e54f86d3b%3A0x3b5c4e0b59de62e1!2sPalmanova%2C%20Balearic%20Islands%2C%20Spain!5e0!3m2!1sen!2sus!4v1708161234567!5m2!1sen!2sus"
+                            	width="100%"
+                            	height="100%"
+                            	style="border:0;"
+                            	allowfullscreen=""
+                            	loading="lazy">
+                        	</iframe>
+                    	</div>
+                	</div>
+            	</div>
+        	</div>
+    	</section>
+    	<div class="lightbox">
+        	<div class="lightbox-content">
+            	<button class="close-lightbox">&times;</button>
+            	<img src="" alt="Imagen ampliada">
+            	<button class="lightbox-nav prev-btn"><i class="fas fa-chevron-left"></i></button>
+            	<button class="lightbox-nav next-btn"><i class="fas fa-chevron-right"></i></button>
+        	</div>
+    	</div>
+    	<script>
+    	 
+        	const gallery = document.querySelector('.gallery');
+        	const lightbox = document.querySelector('.lightbox');
+        	const lightboxImg = lightbox.querySelector('img');
+        	const closeBtn = lightbox.querySelector('.close-lightbox');
+        	const prevBtn = lightbox.querySelector('.prev-btn');
+        	const nextBtn = lightbox.querySelector('.next-btn');
+        	let currentImageIndex = 0;
+        	const images = document.querySelectorAll('.gallery-item img');
+   	 
+      	 
+        	gallery.addEventListener('click', (e) => {
+            	if (e.target.tagName === 'IMG') {
+                	lightbox.classList.add('active');
+                	lightboxImg.src = e.target.src;
+                	lightboxImg.alt = e.target.alt;
+                	currentImageIndex = Array.from(images).indexOf(e.target);
+                	updateNavButtons();
+            	}
+        	});
+   	 
+       	 
+        	closeBtn.addEventListener('click', () => {
+            	lightbox.classList.remove('active');
+        	});
+   	 
+       	 
+        	document.addEventListener('keydown', (e) => {
+            	if (e.key === 'Escape') {
+                	lightbox.classList.remove('active');
+            	}
+        	});
+   	 
+     	 
+        	prevBtn.addEventListener('click', showPreviousImage);
+        	nextBtn.addEventListener('click', showNextImage);
+   	 
+      	 
+        	document.addEventListener('keydown', (e) => {
+            	if (!lightbox.classList.contains('active')) return;
+           	 
+            	if (e.key === 'ArrowLeft') {
+                	showPreviousImage();
+            	} else if (e.key === 'ArrowRight') {
+                	showNextImage();
+            	}
+        	});
+   	 
+        	function showPreviousImage() {
+            	if (currentImageIndex > 0) {
+                	currentImageIndex--;
+                	lightboxImg.src = images[currentImageIndex].src;
+                	lightboxImg.alt = images[currentImageIndex].alt;
+                	updateNavButtons();
+            	}
+        	}
+   	 
+        	function showNextImage() {
+            	if (currentImageIndex < images.length - 1) {
+                	currentImageIndex++;
+                	lightboxImg.src = images[currentImageIndex].src;
+                	lightboxImg.alt = images[currentImageIndex].alt;
+                	updateNavButtons();
+            	}
+        	}
+   	 
+        	function updateNavButtons() {
+            	prevBtn.style.display = currentImageIndex === 0 ? 'none' : 'block';
+            	nextBtn.style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
+        	}
+    	</script>
+	</body>
+    <footer>
+        <p class="footer">&copy; DHAM SOLAR SYSTEMS 2025. Todos los derechos reservados.</p>
+    </footer>
+    
+    
+</html>
