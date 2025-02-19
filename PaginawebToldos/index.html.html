@@ -40,7 +40,7 @@
             font-family: "Karla", serif;
         }
 
-    	/* Header Styles */
+    	
     	.header {
         	position: fixed;
         	top: 0;
@@ -93,7 +93,7 @@
         	color: var(--secondary-color);
     	}
 
-    	/* Hero Section */
+    	
     	.hero {
         	height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
@@ -129,7 +129,7 @@
     	}
    	 
 
-    	/* Sections */
+   
     	.section {
         	padding: 5rem 2rem;
     	}
@@ -200,7 +200,6 @@
     	}
    	 
 
-    	/* Products Grid */
     	.products-grid {
         	display: grid;
         	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -229,7 +228,7 @@
         	padding: 1.5rem;
     	}
 
-    	/* Features Section */
+    	
     	.features-grid {
         	display: grid;
         	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -259,7 +258,6 @@
         	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     	}
 
-    	/* Contact Section */
     	.contact-section {
         	background: rgb(214, 214, 214);
     	}
@@ -331,7 +329,7 @@
         	background: var(--secondary-color);
     	}
 
-    	/* Gallery */
+    	
     	.gallery {
         	display: grid;
         	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -357,7 +355,6 @@
         	transform: scale(1.1);
     	}
 
-    	/* Mobile Menu */
     	.mobile-menu-btn {
         	display: none;
         	font-size: 1.5rem;
@@ -367,7 +364,7 @@
    
         
 
-    	/* Animations */
+    	
     	@keyframes fadeInUp {
         	from {
             	opacity: 0;
@@ -378,7 +375,7 @@
             	transform: translateY(0);
         	}
     	}
-    	/* Lightbox Styles */
+    	
 .lightbox {
 	display: none;
 	position: fixed;
@@ -445,7 +442,7 @@
 	right: 20px;
 }
 @media screen and (max-width: 1023px) {
-    /* Header & Navigation */
+    
     .header {
         height: 90px;
     }
@@ -464,7 +461,6 @@
         height: 60px;
     }
     
-    /* Hero Section */
     .hero h1 {
         font-size: 3rem;
     }
@@ -473,7 +469,7 @@
         font-size: 1.5rem;
     }
     
-    /* Sections */
+  
     .section, .section-quienes-somos, .section-servicios {
         padding: 3rem 1.5rem;
     }
@@ -495,7 +491,7 @@
         font-size: 1.5rem;
     }
     
-    /* Features Grid */
+    
     .features-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
@@ -506,13 +502,12 @@
         height: 180px;
     }
     
-    /* Contact Section */
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    /* Gallery */
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -521,16 +516,16 @@
         height: 200px;
     }
     
-    /* Lightbox Navigation */
+    
     .lightbox-nav {
         font-size: 24px;
         padding: 15px;
     }
 }
 
-/* Mobile Phones (320px - 767px) */
+
 @media screen and (max-width: 1023px) {
-    /* Header & Navigation */
+    
     .header {
         height: 90px;
     }
@@ -549,7 +544,7 @@
         height: 60px;
     }
     
-    /* Hero Section */
+    
     .hero h1 {
         font-size: 3rem;
     }
@@ -558,7 +553,6 @@
         font-size: 1.5rem;
     }
     
-    /* Sections */
     .section, .section-quienes-somos, .section-servicios {
         padding: 3rem 1.5rem;
     }
@@ -580,7 +574,7 @@
         font-size: 1.5rem;
     }
     
-    /* Features Grid */
+  
     .features-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
@@ -591,13 +585,13 @@
         height: 180px;
     }
     
-    /* Contact Section */
+    
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    /* Gallery */
+    
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -605,17 +599,16 @@
     .gallery-item img {
         height: 200px;
     }
-    
-    /* Lightbox Navigation */
+
     .lightbox-nav {
         font-size: 24px;
         padding: 15px;
     }
 }
 
-/* Menú hamburguesa para móviles */
+
 @media screen and (max-width: 767px) {
-    /* Estilos para el botón de hamburguesa */
+  
     .mobile-menu-btn {
         display: block;
         position: absolute;
@@ -629,7 +622,6 @@
         z-index: 1010;
     }
     
-    /* Header & Navigation para móvil */
     .header {
         height: 80px;
     }
@@ -648,9 +640,9 @@
         z-index: 1005;
     }
     
-    /* Menú navegación móvil */
+    
     .nav-menu {
-        display: none; /* Oculto por defecto */
+        display: none; 
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -665,7 +657,7 @@
     }
     
     .nav-menu.active {
-        display: flex; /* Se muestra cuando tiene la clase active */
+        display: flex;
     }
     
     .nav-menu li {
@@ -682,7 +674,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* Hero Section */
+    
     .hero {
         height: 90vh;
         margin-top: 0;
@@ -696,7 +688,6 @@
         font-size: 1.2rem;
     }
     
-    /* Quienes Somos Section */
     .quienes-somos-content h3 {
         font-size: 2.2rem;
     }
@@ -708,13 +699,12 @@
     .quienes-somos-content p {
         font-size: 1.2rem;
     }
-    
-    /* Sections */
+   
     .section-title, .section-title-servicios {
         font-size: 32px;
     }
     
-    /* Features Grid */
+    
     .features-grid {
         grid-template-columns: 1fr;
     }
@@ -727,8 +717,7 @@
         width: 150px;
         height: 150px;
     }
-    
-    /* Gallery */
+
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
@@ -737,7 +726,7 @@
         height: 150px;
     }
     
-    /* Contact Form */
+    
     .form-group input,
     .form-group textarea {
         padding: 0.6rem;
@@ -748,7 +737,7 @@
         padding: 0.8rem 1rem;
     }
     
-    /* Lightbox */
+    
     .lightbox-content {
         max-width: 95%;
     }
@@ -771,7 +760,6 @@
         font-size: 24px;
     }
     
-    /* WhatsApp Button */
     .whatsapp-btn {
         width: 50px;
         height: 50px;
@@ -780,15 +768,14 @@
     }
 }
 
-/* Small Mobile Phones (320px - 479px) */
 @media screen and (max-width: 479px) {
-    /* Header */
+   
     .mobile-menu-btn {
         top: 20px;
         right: 15px;
     }
     
-    /* Hero Section */
+
     .hero {
         height: 70vh;
     }
@@ -801,7 +788,6 @@
         font-size: 1rem;
     }
     
-    /* Sections */
     .section, .section-quienes-somos, .section-servicios {
         padding: 2rem 1rem;
     }
@@ -815,7 +801,7 @@
         margin-bottom: 1.5rem;
     }
     
-    /* Quienes Somos */
+    
     .quienes-somos-content {
         padding: 1rem;
     }
@@ -828,13 +814,13 @@
         font-size: 1rem;
     }
     
-    /* Gallery */
+    
     .gallery {
         grid-template-columns: 1fr;
         gap: 0.8rem;
     }
     
-    /* Contact Info */
+    
     .contact-info h3 {
         font-size: 1.5rem;
     }
@@ -843,12 +829,11 @@
         font-size: 0.9rem;
     }
     
-    /* Map */
     .map {
         height: 200px;
     }
     
-    /* Footer */
+    
     footer {
         padding: 1.5rem 1rem;
     }
@@ -864,6 +849,9 @@
 	<header class="header">
     	<div class="nav-container">
         	<img class="logo" src="logo-DHAM-1.jpg">
+			<button class="mobile-menu-btn" style="display: none;">
+				<i class="fas fa-bars"></i>
+			</button>
         	<ul class="nav-menu">
             	<li><a href="#inicio">Inicio</a></li>
             	<li><a href="#Quienes-somos">Sobre nosotros</a></li>
@@ -1085,6 +1073,39 @@
             	nextBtn.style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
         	}
     	</script>
+		<script>
+			
+			const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+			const navMenu = document.querySelector('.nav-menu');
+			
+		
+			function checkScreenSize() {
+				if (window.innerWidth <= 767) {
+					mobileMenuBtn.style.display = 'block';
+				} else {
+					mobileMenuBtn.style.display = 'none';
+					navMenu.classList.remove('active');
+				}
+			}
+			
+			window.addEventListener('load', checkScreenSize);
+			window.addEventListener('resize', checkScreenSize);
+			
+			
+			mobileMenuBtn.addEventListener('click', () => {
+				navMenu.classList.toggle('active');
+			});
+			
+			const navLinks = document.querySelectorAll('.nav-menu a');
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					if (window.innerWidth <= 767) {
+						navMenu.classList.remove('active');
+					}
+				});
+			});
+			
+		</script>
 	</body>
     <footer>
         <p class="footer">&copy; DHAM SOLAR SYSTEMS 2025. Todos los derechos reservados.</p>
