@@ -1106,6 +1106,20 @@
 			});
 			
 		</script>
+	<script>
+			document.getElementById("contactForm").addEventListener("submit", function(event) {
+			event.preventDefault();
+			const formData = {
+				name: document.getElementById("name").value,
+				email: document.getElementById("email").value,
+				phone: document.getElementById("phone").value,
+				message: document.getElementById("message").value
+			};
+			
+			alert("¡Gracias por contactar con nosotros! Te responderemos lo antes posible.");
+			this.reset();
+		});
+		</script>
 	</body>
     <footer>
         <p class="footer">&copy; DHAM SOLAR SYSTEMS 2025. Todos los derechos reservados.</p>
